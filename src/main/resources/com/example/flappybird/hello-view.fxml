@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: FFE6C7;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flappybird.App">
+<children>
+      <ImageView fx:id="backgroundImageView" fitHeight="400.0" fitWidth="714.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../cityskyline.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="700.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+         <image>
+            <Image url="@../../../grass.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 2, 0, 0, 0);">
+         <image>
+            <Image url="@../../../grass.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="birdImageView" fitHeight="30.0" fitWidth="28.0" layoutX="500.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bird.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="bestScoreLabel" layoutX="447.0" layoutY="33.0" text="Best score :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="scoreAmountLabel" layoutX="574.0" layoutY="33.0" prefHeight="17.0" prefWidth="36.0" text="0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="scoreLabel" layoutX="310.0" layoutY="-50.0" text="Score :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane fx:id="creditsPane" layoutX="366.0" layoutY="95.0" opacity="0.95" prefHeight="234.0" prefWidth="333.0" style="-fx-background-color: white; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);" visible="false">
+         <children>
+            <Pane prefHeight="43.0" prefWidth="333.0" style="-fx-background-color: #D8D9DA; -fx-background-radius: 5; -fx-border-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+            <Label fx:id="creditsPaneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="17.0" prefWidth="322.0" text="CREDITS" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="closeCreditsButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="22.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0); -fx-background-color: #faf6ed; -fx-padding: 0;" text="x" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="madeByLabel" layoutX="26.0" layoutY="67.0" text="Made by:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="authorLabel" layoutX="145.0" layoutY="65.0" text="Piotr Haraburda" textFill="#61677a">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mailLabel" layoutX="145.0" layoutY="94.0" text="haraburda.piotr.dev@gmail.com" textFill="#61677a">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="contactViaLabel" layoutX="26.0" layoutY="95.0" text="Contact me at:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="backendLabel" layoutX="26.0" layoutY="125.0" text="Backend:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="frontendLabel" layoutX="26.0" layoutY="153.0" text="Frontend:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="credits2Label" layoutX="117.0" layoutY="206.0" text="Font used: https://www.dafont.com/gameplay.font">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label fx:id="credits1Label" layoutX="114.0" layoutY="189.0" text="Background image used: kjpargeter on Freepik.com">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="123.0" text="Java" textFill="#61677a" />
+            <Label layoutX="145.0" layoutY="151.0" text="JavaFX" textFill="#61677a" />
+            <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="26.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../credits2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="settingsPane" layoutX="366.0" layoutY="114.0" opacity="0.95" prefHeight="209.0" prefWidth="333.0" style="-fx-background-color: white; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);" visible="false">
+         <children>
+            <Pane prefHeight="43.0" prefWidth="333.0" style="-fx-background-color: #D8D9DA; -fx-background-radius: 5; -fx-border-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+            <Label fx:id="settingsPaneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="17.0" prefWidth="322.0" text="SETTINGS" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="musicLabel" layoutX="42.0" layoutY="75.0" text="MUSIC" />
+            <Label fx:id="soundLabel" layoutX="42.0" layoutY="120.0" text="SOUND" />
+            <Slider fx:id="musicVolumeSlider" blockIncrement="0.1" layoutX="152.0" layoutY="69.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseReleased="#onMusicVolumeChanged" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="0.1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <Label fx:id="bestScoreSavingLabel" layoutX="42.0" layoutY="167.0" text="SAVE YOUR BEST SCORE" />
+            <Slider fx:id="soundVolumeSlider" blockIncrement="0.1" layoutX="152.0" layoutY="115.0" majorTickUnit="0.2" max="1.0" minorTickCount="1" onMouseReleased="#onSoundVolumeChanged" showTickLabels="true" showTickMarks="true" snapToTicks="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <CheckBox fx:id="saveScoreCheckBox" layoutX="222.0" layoutY="167.0" mnemonicParsing="false" onMouseReleased="#onSaveCheckBoxPressed">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></CheckBox>
+            <Button fx:id="closeSettingsButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="22.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0); -fx-background-color: #faf6ed; -fx-padding: 0;" text="x" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+    <Pane fx:id="leftPane" blendMode="SRC_ATOP" prefHeight="410.0" prefWidth="344.0" style="-fx-background-color: #D8D9DA; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);">
+        <children>
+            <Pane layoutY="340.0" prefHeight="63.0" prefWidth="344.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0); -fx-background-color: #61677A;">
+               <children>
+                  <Button fx:id="playButton" layoutX="108.0" layoutY="15.0" mnemonicParsing="false" onAction="#onPlayClick" prefHeight="30.0" prefWidth="128.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0); -fx-background-radius: 5; -fx-background-color: #D8D9DA;" text="Play">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children></Pane>
+            <Pane prefHeight="103.0" prefWidth="344.0" style="-fx-background-color: #61677A; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);" />
+            <Label fx:id="appNameLabel" alignment="CENTER" layoutX="25.0" layoutY="22.0" prefHeight="26.0" prefWidth="295.0" text="FlappyBird" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="25.0" />
+                </font>
+            </Label>
+            <Label fx:id="diffLabel" alignment="CENTER_RIGHT" layoutX="37.0" layoutY="150.0" prefHeight="17.0" prefWidth="117.0" text="DIFFICULTY LEVEL" textAlignment="RIGHT" textFill="#61677a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Slider fx:id="difficultySlider" blockIncrement="1.0" layoutX="190.0" layoutY="150.0" majorTickUnit="1.0" max="3.0" min="1.0" minorTickCount="0" onMouseReleased="#onDifficultyChanged" prefHeight="24.0" prefWidth="117.0" showTickMarks="true" snapToTicks="true" value="2.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <Label layoutX="100.0" layoutY="62.0" text="Fly high, conquer the sky!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="settingsLabel" alignment="CENTER_RIGHT" layoutX="61.0" layoutY="187.0" prefHeight="17.0" prefWidth="93.0" text="SETTINGS" textAlignment="RIGHT" textFill="#61677a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="creditsLabel" alignment="CENTER_RIGHT" layoutX="61.0" layoutY="227.0" prefHeight="17.0" prefWidth="93.0" text="CREDITS" textAlignment="RIGHT" textFill="#61677a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="resetLabel" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="267.0" prefHeight="17.0" prefWidth="132.0" text="RESET YOUR SCORE" textAlignment="RIGHT" textFill="#61677a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="settingsButton" layoutX="233.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0); -fx-background-color: white;" />
+            <Button fx:id="creditsButton" layoutX="233.0" layoutY="223.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0); -fx-background-color: white;" />
+            <Button fx:id="resetButton" layoutX="233.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0); -fx-background-color: white;" />
+            <ImageView fx:id="settingsImageView" fitHeight="22.0" fitWidth="22.0" layoutX="236.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../settings.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="creditsImageView" fitHeight="22.0" fitWidth="22.0" layoutX="236.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../credits.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="resetImageView" fitHeight="22.0" fitWidth="22.0" layoutX="236.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../reset.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="confirmLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="267.0" prefHeight="17.0" prefWidth="140.0" text="ARE YOU SURE?" textAlignment="RIGHT" textFill="#61677a" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="yesButton" layoutX="196.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="49.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: white;" text="Yes" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="noButton" layoutX="249.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="49.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: white;" text="No" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+        </children>
+    </Pane>
+</children>
+</AnchorPane>
